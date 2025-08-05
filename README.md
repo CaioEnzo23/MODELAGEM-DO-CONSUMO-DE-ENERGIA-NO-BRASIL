@@ -1,98 +1,81 @@
-# Modelagem do Consumo de Energia no Brasil - Big Data
+# Análise de Consumo de Energia no Brasil
 
-Este projeto tem como objetivo aplicar técnicas de análise de dados e visualização para entender o comportamento do **consumo de energia elétrica no Brasil**, utilizando uma base de dados pública com recorte temporal e regional.
+Este projeto tem como objetivo analisar dados de consumo de energia elétrica por região e tipo de consumidor no Brasil, utilizando ferramentas de Big Data e Ciência de Dados.
 
-Através do tratamento, análise exploratória e visualização dos dados, buscamos identificar padrões de consumo entre diferentes **tipos de consumidores**, **regiões brasileiras** e **categorias de fornecimento (livre ou cativo)**, assim como sua evolução ao longo do tempo.
+## 📁 Estrutura do Projeto
 
----
+O projeto é implementado em um notebook Jupyter, contendo as seguintes etapas:
 
-## 🔧 1. Setup Inicial
+### 🔧 Setup
+- Importação das bibliotecas principais utilizadas (`pandas`, `numpy`, `matplotlib`, `seaborn`, entre outras).
+- Carregamento da base de dados para análise.
 
-- Importação das bibliotecas essenciais: `pandas`, `numpy`, `matplotlib`, `seaborn` e outras.
-- Carregamento da base de dados contendo informações de consumo de energia por classe, região, tipo de consumidor, data e quantidade de consumidores.
+### 🧹 Pré-processamento dos Dados
+- Identificação de colunas, tipos de dados e estatísticas descritivas.
+- Verificação de nulos, valores duplicados e inconsistências.
+- Conversão de tipos de dados para otimização de performance.
+- Criação de nova coluna de mês para análise temporal mais detalhada.
 
----
-
-## 🧹 2. Pré-processamento dos Dados
-
-- Análise inicial da estrutura do dataset.
-- Conversão de colunas para tipos adequados (ex: float → int).
-- Criação de novas colunas relevantes, como **Mês**.
-- Verificação e remoção de dados duplicados.
-- Tratamento de dados nulos e análise de possíveis outliers.
-
----
-
-## 📊 3. Análise Exploratória de Dados (EDA)
-
-A etapa de EDA revelou insights importantes:
-
-### Distribuição por Classe de Consumidores
-- As classes com mais registros foram: **Industrial** e **Comercial**.
-- A classe com menos registros: **Residencial**.
+### 📊 Análise Exploratória
+- Distribuição dos consumidores por tipo (residencial, industrial, comercial, etc.).
+- Distribuição do consumo por região geográfica (Norte, Nordeste, Sul, Sudeste, Centro-Oeste).
+- Comparação entre consumidores cativos e livres.
+- Análises temporais de consumo por região e por tipo de consumidor.
+- Utilização de histogramas, gráficos de barras e outras visualizações.
 
 <img width="1489" height="790" alt="Image" src="https://github.com/user-attachments/assets/226e0999-3769-4bb9-a672-c228caf45641" />
 
-### Distribuição Regional
-- Regiões com mais registros: **Norte** e **Nordeste**.
-- Regiões com maior consumo absoluto: **Sudeste**, mesmo com menos registros.
-
 <img width="1189" height="590" alt="Image" src="https://github.com/user-attachments/assets/6516e4ee-c75c-414b-bb1c-ab43054c2121" />
-
-### Tipo de Consumidor
-- **Cativo**: maior volume de consumo.
-- **Livre**: menor número de registros e consumo.
 
 <img width="989" height="590" alt="Image" src="https://github.com/user-attachments/assets/a8a7b4d4-9f9f-4a12-aecc-7dcf5927ae4a" />
 
----
+## 🧠 Estruturação do Modelo
 
-## 🕒 4. Análise Temporal
+Após a análise exploratória, foi realizada a modelagem preditiva para estimar o consumo energético com base nos dados históricos.
 
-- Evolução do consumo por **região** ao longo do tempo revelou que o **Sudeste** sempre liderou o consumo.
-- Crescimento notável no consumo **residencial**, apesar de ser a classe com menos registros.
+- As variáveis categóricas foram transformadas em numéricas com `get_dummies`.
+- A coluna de data também foi convertida para formato numérico.
+- A base foi dividida em variáveis de entrada (`X`) e saída (`Y`) e separada em conjuntos de treino e teste.
+- Modelos aplicados:
+  - **Random Forest Regressor**
+  - **Regressão Linear**
+  - **Árvore de Decisão (Decision Tree Regressor)**
 
-![image](https://github.com/usuario/exemplo-path/imagem4.png)
-![image](https://github.com/usuario/exemplo-path/imagem5.png)
+## 📈 Construção dos Resultados
 
----
+Cada modelo foi treinado e avaliado com base no conjunto de teste:
 
-## 🔎 5. Foco em Consumidores Cativos
+- Avaliação dos modelos feita por métricas como:
+  - R² (Coeficiente de Determinação)
+  - Erro Médio Absoluto (MAE)
+  - Erro Quadrático Médio (MSE)
 
-- Ao filtrar apenas os consumidores **cativos**, observou-se uma queda acentuada no consumo da classe **industrial**.
-- A classe **residencial** mostrou-se estável, com leve crescimento ao longo do tempo.
+- Comparação do desempenho entre os modelos mostrou que o **Random Forest** apresentou melhor resultado geral na predição do consumo.
 
-![image](https://github.com/usuario/exemplo-path/imagem6.png)
+- Além disso, foram geradas previsões e visualizações para validar a performance e aderência dos modelos aos dados reais.
 
----
+<img width="640" height="251" alt="Image" src="https://github.com/user-attachments/assets/71924210-32fa-4957-97ed-34afc8af39d7" />
 
-## 📌 Conclusões
+<img width="1580" height="525" alt="Image" src="https://github.com/user-attachments/assets/58ffd900-fd0c-4bc2-8709-9934570f3780" />
 
-- O projeto revelou **padrões relevantes** de consumo que podem embasar políticas energéticas e investimentos em infraestrutura.
-- O comportamento de consumo varia significativamente por tipo de consumidor, região e tempo.
-- O **crescimento do consumo residencial cativo** sugere atenção especial para esse segmento no futuro.
+## 🔍 Principais Descobertas
+- As regiões Norte e Nordeste concentram mais registros, mas a região Sudeste lidera em volume total de consumo.
+- Houve crescimento no consumo residencial ao longo do tempo.
+- Queda no consumo cativo industrial e crescimento correspondente no tipo livre.
+- O modelo Random Forest obteve melhor desempenho preditivo.
 
----
-
-## 🚀 Tecnologias Utilizadas
-
+## 🛠️ Tecnologias Utilizadas
 - Python
+- Jupyter Notebook
 - Pandas
-- NumPy
 - Matplotlib
 - Seaborn
-- Jupyter Notebook
+- Scikit-learn
+- NumPy
 
----
-
-## 📎 Observações
-
-Para visualizar os gráficos corretamente, abra o notebook com um ambiente compatível como **Jupyter Notebook** ou **Google Colab**.
-
----
-
-## ✨ Autor
-
-**Caio Enzo**  
-🔗 [LinkedIn](https://www.linkedin.com/in/caioenzo)  
-📊 [GitHub](https://github.com/Caio23)  
+## 📌 Requisitos
+- Python 3.8+
+- Ambiente Jupyter Notebook
+- Instalar dependências com:
+  ```bash
+  pip install -r requirements.txt
