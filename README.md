@@ -2,6 +2,12 @@
 
 Este projeto tem como objetivo analisar dados de consumo de energia elétrica por região e tipo de consumidor no Brasil, utilizando ferramentas de Big Data e Ciência de Dados.
 
+Segundo a Empresa de Pesquisa Energética (EPE), o consumo de energia elétrica é um dos fatores essenciais para o desenvolvimento econômico e social no Brasil. A análise desse consumo por região permite identificar padrões e otimizar a distribuição de recursos, promovendo maior eficiência na gestão energética.
+
+Estudos prévios, como o de dos Santos e colaboradores (2025), destacam a importância da previsão do consumo energético, principalmente na região Sudeste, utilizando modelos estatísticos e de aprendizado de máquina. Tais abordagens são fundamentais para subsidiar políticas públicas e estratégias do setor elétrico, permitindo ajustes na oferta de energia e evitando sobrecargas na rede de distribuição.
+
+Neste contexto, o presente projeto busca aplicar técnicas de Big Data e aprendizado de máquina para modelar o consumo energético no Brasil, oferecendo insights estratégicos para uma gestão mais sustentável e eficaz dos recursos elétricos.
+
 ## 📁 Estrutura do Projeto
 
 O projeto é implementado em um notebook Jupyter, contendo as seguintes etapas:
@@ -57,6 +63,10 @@ Cada modelo foi treinado e avaliado com base no conjunto de teste:
 <img width="640" height="251" alt="Image" src="https://github.com/user-attachments/assets/71924210-32fa-4957-97ed-34afc8af39d7" />
 
 <img width="1580" height="525" alt="Image" src="https://github.com/user-attachments/assets/58ffd900-fd0c-4bc2-8709-9934570f3780" />
+
+O presente projeto abordou a análise do consumo energético mensal por meio de técnicas de Big Data e Ciência de Dados, visando extrair insights estratégicos para uma gestão eficiente dos recursos. A partir da coleta, limpeza e exploração dos dados, foi possível compreender padrões de consumo entre diferentes regiões e tipos de consumidores, permitindo uma visão mais estruturada do comportamento energético.
+
+A implementação de modelos preditivos e metodologias de análise reforça a importância do uso de dados na tomada de decisões, contribuindo para um planejamento energético mais preciso e otimizado. A ciência de dados aplicada ao setor energético demonstra um grande potencial para aprimorar a eficiência e promover soluções inovadoras voltadas à sustentabilidade. Portanto, este estudo evidencia o papel fundamental da tecnologia na evolução da gestão energética, auxiliando na busca por um consumo mais consciente e estratégico.
 
 ## 🔍 Principais Descobertas
 - As regiões Norte e Nordeste concentram mais registros, mas a região Sudeste lidera em volume total de consumo.
