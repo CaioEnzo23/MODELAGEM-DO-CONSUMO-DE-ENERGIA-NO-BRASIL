@@ -31,7 +31,7 @@ A etapa de EDA revelou insights importantes:
 - As classes com mais registros foram: **Industrial** e **Comercial**.
 - A classe com menos registros: **Residencial**.
 
-![image](https://github.com/CaioEnzo23/Modelagem-do-Consumo-de-Energia-no-Brasil/issues/1)
+(https://github.com/CaioEnzo23/Modelagem-do-Consumo-de-Energia-no-Brasil/issues/1)
 
 ### Distribuição Regional
 - Regiões com mais registros: **Norte** e **Nordeste**.
