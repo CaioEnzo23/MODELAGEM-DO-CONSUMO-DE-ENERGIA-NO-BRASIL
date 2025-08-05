@@ -37,13 +37,13 @@ A etapa de EDA revelou insights importantes:
 - Regiões com mais registros: **Norte** e **Nordeste**.
 - Regiões com maior consumo absoluto: **Sudeste**, mesmo com menos registros.
 
-![image](https://github.com/usuario/exemplo-path/imagem2.png)
+<img width="1189" height="590" alt="Image" src="https://github.com/user-attachments/assets/6516e4ee-c75c-414b-bb1c-ab43054c2121" />
 
 ### Tipo de Consumidor
 - **Cativo**: maior volume de consumo.
 - **Livre**: menor número de registros e consumo.
 
-![image](https://github.com/usuario/exemplo-path/imagem3.png)
+<img width="989" height="590" alt="Image" src="https://github.com/user-attachments/assets/a8a7b4d4-9f9f-4a12-aecc-7dcf5927ae4a" />
 
 ---
 
